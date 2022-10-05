@@ -123,7 +123,7 @@ input[type="text"]:focus{
 }
 
 input[type="submit"]{
-    width: 10%;
+    /* width: 10%; */
     height: 50%;
     border-radius: 7px;
     background-color: var(--Cyan);
@@ -131,6 +131,7 @@ input[type="submit"]{
     font-weight: 600;
     border: none;
     cursor: pointer;
+    padding: 0 16px;
 }
 
 .advancedStats{
@@ -313,4 +314,110 @@ input[type="submit"]{
 .placeHolderError::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--Red);
     opacity: 1; /* Firefox */
+  }
+
+  @media screen and (max-width:1440px) {
+    #hero h1{
+        font-size: 50px;
+    }
+
+    .inputBg{
+        width: 90%;
+    }
+
+    .advancedStatsHeading{
+        width: 50%;
+    }
+
+    .advancedStatsBoxes{
+        padding: 2rem;
+    }
+
+    .url{
+        width: 80%;
+    }
+  }
+
+  @media screen and (max-width:1200px) {
+    #hero h1{
+        font-size: 40px;
+    }
+
+    .inputBg{
+        width: 100%;
+    }
+
+    #main{
+        padding: 20px 100px;
+    }
+
+    .advancedStatsBoxes{
+        padding: 2rem 0;
+        margin: auto;
+    }
+
+    .advancedStatsBoxes div{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .url{
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width:992px) {
+    #hero{
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    #hero div:first-child{
+        width: 70%;
+        margin: 3rem auto;
+    }
+
+    .advancedStatsHeading{
+        width: 70%;
+    }
+
+    nav, #hero, #main, #boostSection{
+        padding: 20px 0;
+    }
+
+    #main{
+        padding: 50px;
+    }
+
+    .advancedStatsBoxes{
+        flex-direction: column;
+        gap: 60px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    #main{
+        padding: 20px;
+    }
+
+    .inputBg{
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .url{
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .url div{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .advancedStatsBoxes{
+        flex-direction: column;
+        gap: 60px;
+    }
   }
