@@ -392,8 +392,10 @@ input[type="submit"]{
     .advancedStatsBoxes{
         flex-direction: column;
         gap: 60px;
+        width: 75%;
     }
   }
+
 
   @media screen and (max-width:768px) {
     #main{
@@ -417,7 +419,37 @@ input[type="submit"]{
     }
 
     .advancedStatsBoxes{
+        width: 85%;
+    }
+  }
+
+
+  @media screen and (max-width:576px) {
+    
+    .inputBg{
         flex-direction: column;
-        gap: 60px;
+        gap: 16px;
+    }
+
+    input[type="text"]{
+        width: 100%;
+        margin-right: 0;
+        height: 100%;
+    }
+
+    input[type="submit"]{
+        height: 85%;
+    }
+
+    .advancedStatsHeading{
+        width: 95%;
+    }
+
+    .advancedStatsBoxes p, .advancedStats p{
+        font-size: 14px;
+    }
+
+    .advancedStatsBoxes{
+        width: 100%;
     }
   }
