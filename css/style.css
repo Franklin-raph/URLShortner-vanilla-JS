@@ -106,17 +106,26 @@ nav .login a:last-child, #hero a{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 70%;
     margin:5rem auto auto;
     border-radius: 7px;
-    position: relative;
-    top: 48%;
+    padding: 1.5rem 0 1rem;
+    gap: 10px;
+}
+
+.inps{
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
 }
 
 input[type="text"]{
-    margin-right: 16px;
     width: 80%;
-    height: 50px;
+    height: 52px;
     border-radius: 7px;
     border: none;
     padding-left: 20px;
@@ -128,14 +137,14 @@ input[type="text"]:focus{
 }
 
 input[type="submit"]{
-    height: 40px;
+    height: 52px;
     border-radius: 7px;
     background-color: var(--Cyan);
     color: #fff;
     font-weight: 600;
     border: none;
     cursor: pointer;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 .advancedStats{
@@ -578,6 +587,12 @@ input[type="submit"]{
     .inputBg{
         flex-direction: column;
         gap: 16px;
+        align-items: center;
+    }
+
+    .inps{
+        height: 100%;
+        flex-direction: column;
         align-items: center;
     }
 
