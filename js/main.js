@@ -8,6 +8,7 @@ const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z
 const regex = new RegExp(expression);
 const navlinks = document.querySelector('.navlinks')
 const navToggler = document.querySelector('.navToggler')
+const html = document.querySelector("html")
 
 
 async function getLink(){
@@ -71,6 +72,7 @@ shortItBtn.addEventListener('click', async function(e){
 function navOpen(){
     navlinks.style.top = navlinks.style.top === "9%" ? "-9%" : "9%"
     navToggler.classList.toggle('open')
+    html.style.overflowY = html.style.overflowY === "hidden" ? "scroll" : "hidden"
 }
 
 

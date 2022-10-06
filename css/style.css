@@ -237,12 +237,16 @@ input[type="submit"]{
 }
 
 #footer{
+    background-color: var(--Very-Dark-Violet);
+}
+
+.footerDiv{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: var(--Very-Dark-Violet);
+    gap: 30px;
     color: #fff;
-    padding: 20px 150px;
+    padding: 50px 150px 20px;
 }
 
 .footerLogo{
@@ -250,7 +254,9 @@ input[type="submit"]{
 }
 
 .footerLinks{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 90px;
 }
 
 .footerLinks div{
@@ -259,22 +265,33 @@ input[type="submit"]{
 }
 
 .footerLinks div:nth-child(2){
-    margin: 0 8rem;
+    /* margin: 0 8rem; */
 }
 
 .footerLinks div:last-child{
-    grid-template-columns: repeat(4, 1fr);
-    margin-left: 4rem;
+    grid-template-columns: repeat(5, 1fr);
+    /* margin-left: 4rem; */
 }
 
 .footerLinks div:last-child i{
     font-size: 1.5rem;
 }
 
-
 .footerLinks a{
     color: var(--Gray);
 }
+
+.footerText{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+    margin-top: 1rem;
+  }
 
 .urlContainer{
     margin-top: 40px;
@@ -356,7 +373,7 @@ input[type="submit"]{
         width: 80%;
     }
 
-    #footer{
+    .footerDiv{
         padding: 20px 100px;
     }
   }
@@ -384,12 +401,9 @@ input[type="submit"]{
         width: 90%;
     }
 
-    #footer{
-        padding: 20px 70px;
-    }
-
-    .footerLinks div:nth-child(2){
-        margin: 0 4rem;
+    .footerDiv{
+        padding: 20px 50px;
+        flex-direction: column;
     }
   }
 
@@ -441,8 +455,8 @@ input[type="submit"]{
         font-size: 2rem;
     }
 
-    #footer{
-        padding: 20px 20px;
+    .footerLinks{
+        gap: 30px;
     }
 
     .footerLinks div:nth-child(2){
@@ -557,10 +571,6 @@ input[type="submit"]{
         padding: 10px 0;
     }
 
-    #footer{
-        flex-direction: column;
-    }
-
     .footerLinks{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -624,13 +634,17 @@ input[type="submit"]{
         width: 100%;
     }
 
-    #footer{
+    .footerDiv{
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
+    .footerText{
+        flex-direction: column;
+      }
 
     .footerLinks div:nth-child(2){
         margin: 2rem 0;
@@ -696,6 +710,10 @@ input[type="submit"]{
 
     .url{
         position: relative;
+    }
+
+    .footerLinks div:last-child{
+        gap: 30px;
     }
   }
 
