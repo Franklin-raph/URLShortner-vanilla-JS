@@ -217,7 +217,7 @@ input[type="submit"]{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 40vh;
+    height: 40%;
 }
 
 #boostSection h1{
@@ -448,7 +448,7 @@ input[type="submit"]{
     }
 
     #boostSection{
-        height: 35vh;
+        height: 10%;
     }
 
     #boostSection h1{
