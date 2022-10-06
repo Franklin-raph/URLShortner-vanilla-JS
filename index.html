@@ -11,14 +11,26 @@
 <body>
     <nav>
        <div>
-            <a href="#">Shortly</a>
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Resources</a>
+            <a href="#" class="logo">Shortly</a>
+            
+            <div class="navlinks">
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">Resources</a>
+                <div class="login">
+                    <a href="#">Login</a>
+                    <a href="#">Sign Up</a>
+                </div>
+            </div>
        </div>
-       <div>
-        <a href="#">Login</a>
-        <a href="#">Sign Up</a>
+       <div class="navToggler" onclick="navOpen()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+       </div>
+       <div class="login">
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
        </div>
     </nav>
 
@@ -107,7 +119,7 @@
                 <a href="#">Careers</a>
                 <a href="#">Contact</a>
             </div>
-            <div>
+            <div class="footerIcons">
                 <a href="#">
                     <i class="ri-whatsapp-fill"></i>
                 </a>

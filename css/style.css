@@ -46,21 +46,25 @@ nav div{
     gap: 30px;
 }
 
-nav div:first-child a:first-child{
+.logo{
     font-size: 30px;
     font-weight: bold;
     color: var(--Very-Dark-Blue);
 }
 
-nav div:first-child a:nth-child(2), a:nth-child(3), a:nth-child(4), div:nth-child(2) a:first-child{
+.navlinks a, .login a:first-child{
     color: var(--Grayish-Violet);
 }
 
-nav div:last-child a:last-child, #hero a{
+nav .login a:last-child, #hero a{
     color: var(--White);
     background-color: var(--Cyan);
     padding: 7px 16px;
     border-radius: 50px;
+}
+
+.navlinks .login{
+    display: none;
 }
 
 #hero h1{
@@ -201,7 +205,7 @@ input[type="submit"]{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 25vh;
+    height: 40vh;
 }
 
 #boostSection h1{
@@ -215,7 +219,7 @@ input[type="submit"]{
     background-color: var(--Cyan);
     padding: 7px 38px;
     border-radius: 50px;
-    margin-bottom: 3rem;
+    margin: 2rem 0 3rem;
     font-size: 22px;
     font-weight: 600;
 }
@@ -336,6 +340,10 @@ input[type="submit"]{
     .url{
         width: 80%;
     }
+
+    #footer{
+        padding: 20px 100px;
+    }
   }
 
   @media screen and (max-width:1200px) {
@@ -364,12 +372,26 @@ input[type="submit"]{
     .url{
         width: 100%;
     }
+
+    #footer{
+        padding: 20px 70px;
+    }
+
+    .footerLinks div:nth-child(2){
+        margin: 0 4rem;
+    }
   }
 
   @media screen and (max-width:992px) {
+
+    nav{
+        padding: 20px 80px;
+    }
+
     #hero{
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 50px;
+        text-align: center;
     }
 
     #hero div:first-child{
@@ -377,11 +399,15 @@ input[type="submit"]{
         margin: 3rem auto;
     }
 
+    #hero img{
+        width: 70%;
+    }
+
     .advancedStatsHeading{
         width: 70%;
     }
 
-    nav, #hero, #main, #boostSection{
+    #hero, #main, #boostSection{
         padding: 20px 0;
     }
 
@@ -393,6 +419,26 @@ input[type="submit"]{
         flex-direction: column;
         gap: 60px;
         width: 75%;
+    }
+
+    #boostSection{
+        height: 35vh;
+    }
+
+    #boostSection h1{
+        font-size: 2rem;
+    }
+
+    #footer{
+        padding: 20px 20px;
+    }
+
+    .footerLinks div:nth-child(2){
+        margin: 0 2rem;
+    }
+
+    .footerLinks div:last-child{
+        margin-left: 2rem;
     }
   }
 
@@ -421,10 +467,115 @@ input[type="submit"]{
     .advancedStatsBoxes{
         width: 85%;
     }
+
+    nav{
+        padding: 20px;
+    }
+
+    .navlinks{
+        position: absolute;
+        background-color: var(--Dark-Violet);
+        display: flex;
+        flex-direction: column;
+        top: -10%;
+        width: 400px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 0px;
+        border-radius: 16px;
+        transition: top ease-in .5s;
+    }
+
+    .navToggler{
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .line1, .line2, .line3{
+        text-align: center;
+        margin: auto;
+        width: 35px;
+        height: 2px;
+        background-color: var(--Gray);
+    }
+
+    .navToggler.open .line1{
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    .navToggler.open .line2{
+        opacity: 0;
+        width: 0;
+    }
+
+    .navToggler.open .line3{
+        transform: rotate(-45deg) translateY(-10px);
+    }
+
+    .navToggler .line1, .navToggler .line2, .navToggler .line3{
+        transition: all ease-in 0.5s;
+    }
+
+    .navlinks .login{
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--Grayish-Violet);
+        padding-top: 30px;
+    }
+
+    nav .login{
+        display: none;
+    }
+
+    .navlinks a, .navlinks .login a{
+        font-weight: 600;
+        color: #fff;
+        font-size: 19px;
+    }
+
+    .navlinks .login a:last-child{
+        width: 300px;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    #footer{
+        flex-direction: column;
+    }
+
+    .footerLinks{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 3rem;
+    }
+
+    .footerLinks div:nth-child(2){
+        margin-right: 90px;
+        margin-left: 0px;
+    }
+
+    .footerLinks div:last-child{
+        display: flex;
+        gap: 40px;
+        margin: 3rem auto;
+    }
   }
 
 
   @media screen and (max-width:576px) {
+
+    #hero img{
+        width: 95%;
+    }
+
+    #hero div:first-child{
+        width: 85%;
+    }
     
     .inputBg{
         flex-direction: column;
@@ -451,5 +602,71 @@ input[type="submit"]{
 
     .advancedStatsBoxes{
         width: 100%;
+    }
+
+    #footer{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footerLinks div:nth-child(2){
+        margin: 2rem 0;
+    }
+
+    .footerLinks div:last-child{
+        margin:2rem 0;
+        display: flex !important;
+        gap: 40px;
+    }
+
+    .footerLinks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+
+
+  @media screen and (max-width:480px) {
+    #hero{
+        text-align: center;
+    }
+
+    #hero h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    #hero p{
+        font-size: 18px;
+    }
+
+    #boostSection{
+        text-align: center;
+    }
+
+    #boostSection h1{
+        font-size: 1.6rem;
+    }
+
+    #boostSection a{
+        font-size: 19px;
+    }
+
+    .navlinks{
+        width: 350px;
+    }
+  }
+
+  @media screen and (max-width:375px) {
+    .navlinks .login a:last-child{
+        width: 250px;
+    }
+    .navlinks{
+        width: 265px;
     }
   }

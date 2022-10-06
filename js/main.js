@@ -6,6 +6,8 @@ const error = document.querySelector('.error')
 const invalidUrl = document.querySelector('.invalidUrl')
 const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 const regex = new RegExp(expression);
+const navlinks = document.querySelector('.navlinks')
+const navToggler = document.querySelector('.navToggler')
 
 
 async function getLink(){
@@ -64,3 +66,9 @@ shortItBtn.addEventListener('click', async function(e){
         // urlLink.textContent = `https://${urlinput.value}`
     }
 })
+
+
+function navOpen(){
+    navlinks.style.top = navlinks.style.top === "9%" ? "-9%" : "9%"
+    navToggler.classList.toggle('open')
+}
