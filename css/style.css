@@ -93,13 +93,16 @@ nav .login a:last-child, #hero a{
     padding-bottom: 10rem;
 }
 
+.inps{
+    width: 80%;
+}
+
 .inputBg{
     background-image: url(/images/bg-shorten-desktop.svg);
     background-color: var(--Dark-Violet);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 18vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,13 +111,12 @@ nav .login a:last-child, #hero a{
     border-radius: 7px;
     position: relative;
     top: 48%;
-    padding: 1rem 0;
 }
 
 input[type="text"]{
     margin-right: 16px;
     width: 80%;
-    height: 50%;
+    height: 50px;
     border-radius: 7px;
     border: none;
     padding-left: 20px;
@@ -125,13 +127,8 @@ input[type="text"]:focus{
     outline: none;
 }
 
-input:focus body{
-    /* display: none !; */
-}
-
 input[type="submit"]{
-    /* width: 10%; */
-    height: 50%;
+    height: 40px;
     border-radius: 7px;
     background-color: var(--Cyan);
     color: #fff;
@@ -274,7 +271,6 @@ input[type="submit"]{
     font-size: 16px;
 }
 
-/* rgb(235, 241, 241); */
 
 .url{
     background-color: rgb(235, 241, 241);
@@ -312,11 +308,12 @@ input[type="submit"]{
 }
 
 .error, .invalidUrl{
-    position: absolute;
-    left: 4%;
+    background-color: rgba(100, 0, 0, 0.39);
+    border: 2px solid var(--Red);
+    border-radius: 10px;
+    padding: 7px 14px;
+    text-align: center;
     color: var(--Red);
-    bottom: 18px;
-    font-style: italic;
     display: none;
 }
 
@@ -371,7 +368,7 @@ input[type="submit"]{
     }
 
     .url{
-        width: 100%;
+        width: 90%;
     }
 
     #footer{
@@ -587,11 +584,10 @@ input[type="submit"]{
     input[type="text"]{
         width: 100%;
         margin-right: 0;
-        height: 100%;
     }
 
     input[type="submit"]{
-        height: 85%;
+        width: 50%;
     }
 
     .advancedStatsHeading{
@@ -638,9 +634,6 @@ input[type="submit"]{
 
     .urlContainer{
         width: 90%;
-        /* display: grid;
-        place-content: center;
-        place-items: center; */
     }
   }
 
