@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My URI Shortner</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -35,19 +36,19 @@
     </nav>
 
     <section id="hero">
-        <div>
+        <div data-aos="fade-left">
             <h1>More than just shorter links</h1>
             <p>
                 Build your brand’s recognition and get detailed insights on how your links are performing.
             </p>
             <a href="#">Get Started</a>
         </div>
-        <img src="/images/illustration-working.svg" alt="">
+        <img src="/images/illustration-working.svg" alt="" data-aos="fade-right">
     </section>
 
     <div class="underlay">
     </div>
-        <form class="inputBg">
+        <form class="inputBg" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500">
             <div class="errorMsgs">
                 <span class="error">Please add a link here</span>
                 <span class="invalidUrl">Please use a valid URL</span>
@@ -70,21 +71,21 @@
                     </p>
                 </div>
                 <div class="advancedStatsBoxes">
-                    <div>
+                    <div data-aos="fade-down" data-aos-delay="100">
                         <img src="/images/icon-brand-recognition.svg" alt="">
                         <h3>Brand recognition</h3>
                         <p>
                             Brand Recognition Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.
                         </p>
                     </div>
-                    <div>
+                    <div data-aos="fade-down" data-aos-delay="200">
                         <img src="/images/icon-detailed-records.svg" alt="">
                         <h3>Detailed Records</h3>
                         <p>
                             Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.
                         </p>
                     </div>
-                    <div>
+                    <div data-aos="fade-down" data-aos-delay="300">
                         <img src="/images/icon-fully-customizable.svg" alt="">
                         <h3>Fully Customizable</h3>
                         <p>
@@ -137,12 +138,13 @@
                     <i class="ri-linkedin-box-fill"></i>
                 </a>
                 <a href="https://franklinraphaelportfolio.netlify.app" target="_blank">
-                    <i class="ri-globe-line"></i>
+                    <i class="ri-global-line"></i>
                 </a>
             </div>
         </div>
     </section>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>
