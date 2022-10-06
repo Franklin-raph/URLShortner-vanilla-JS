@@ -87,16 +87,6 @@ nav .login a:last-child{
     margin-bottom: 30px;
 }
 
-#hero a{
-    color: var(--White);
-    background-color: var(--Cyan);
-    padding: 7px 38px;
-    border-radius: 50px;
-    margin: 2rem 0 3rem;
-    font-size: 22px;
-    font-weight: 600;
-}
-
 #hero img{
     width: 50%;
 }
@@ -236,7 +226,7 @@ input[type="submit"]{
     margin-bottom: 20px;
 }
 
-#boostSection a{
+#boostSection a, #hero a{
     color: var(--White);
     background-color: var(--Cyan);
     padding: 7px 38px;
@@ -706,7 +696,7 @@ input[type="submit"]{
         font-size: 1.6rem;
     }
 
-    #boostSection a{
+    #boostSection a, #hero a{
         font-size: 19px;
     }
 
