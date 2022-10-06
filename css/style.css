@@ -89,8 +89,7 @@ nav .login a:last-child, #hero a{
 
 #main{
     display: grid;
-    background-color: rgb(218, 218, 218);
-    margin-top: 6rem;
+    background-color: rgb(235, 241, 241);
     padding-bottom: 10rem;
 }
 
@@ -105,7 +104,7 @@ nav .login a:last-child, #hero a{
     align-items: center;
     justify-content: center;
     width: 70%;
-    margin:-7rem auto auto;
+    margin:5rem auto auto;
     border-radius: 7px;
     position: relative;
     top: 48%;
@@ -124,6 +123,10 @@ input[type="text"]{
 
 input[type="text"]:focus{
     outline: none;
+}
+
+input:focus body{
+    /* display: none !; */
 }
 
 input[type="submit"]{
@@ -148,7 +151,6 @@ input[type="submit"]{
 .advancedStatsHeading{
     width: 30%;
     margin:1rem auto 5rem;
-    padding-top: 7rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -272,8 +274,10 @@ input[type="submit"]{
     font-size: 16px;
 }
 
+/* rgb(235, 241, 241); */
+
 .url{
-    background-color: #fff;
+    background-color: rgb(235, 241, 241);
     display: flex;
     width: 70%;
     margin: 10px auto;
@@ -281,6 +285,7 @@ input[type="submit"]{
     align-items: center;
     padding: 16px;
     border-radius: 7px;
+    box-shadow: 7px 7px 10px rgb(218, 218, 218);
 }
 
 .url div{
@@ -349,10 +354,6 @@ input[type="submit"]{
   @media screen and (max-width:1200px) {
     #hero h1{
         font-size: 40px;
-    }
-
-    .inputBg{
-        width: 100%;
     }
 
     #main{
@@ -580,6 +581,7 @@ input[type="submit"]{
     .inputBg{
         flex-direction: column;
         gap: 16px;
+        align-items: center;
     }
 
     input[type="text"]{
@@ -628,6 +630,18 @@ input[type="submit"]{
         justify-content: center;
         align-items: center;
     }
+
+    .url{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .urlContainer{
+        width: 90%;
+        /* display: grid;
+        place-content: center;
+        place-items: center; */
+    }
   }
 
 
@@ -659,6 +673,14 @@ input[type="submit"]{
 
     .navlinks{
         width: 350px;
+    }
+
+    .urlContainer{
+        margin: 40px auto;
+    }
+
+    .url{
+        position: relative;
     }
   }
 
