@@ -9,11 +9,20 @@ const regex = new RegExp(expression);
 const navlinks = document.querySelector('.navlinks')
 const navToggler = document.querySelector('.navToggler')
 const html = document.querySelector("html")
+const loading = document.getElementById("loading")
+const shortenItText = document.querySelector('.shortenItText')
 
 
 async function getLink(){
+    shortenItText.style.display = "none"
+    loading.style.display = "block"
     const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${urlinput.value}`)
     const data = await res.json();
+
+    if(data){
+        shortenItText.style.display = "block"
+        loading.style.display = "none"
+    }
     console.log(data)
     return data
 }
@@ -41,7 +50,6 @@ shortItBtn.addEventListener('click', async function(e){
             urlinput.style.border = "2px solid transparent"
             urlinput.classList.remove('placeHolderError')
         },3500)
-        console.log("first")
     }else if(!urlinput.value.match(regex)){
         invalidUrl.style.display = "block"
         urlinput.style.border = "3px solid var(--Red)"
@@ -64,6 +72,7 @@ shortItBtn.addEventListener('click', async function(e){
         `
         div.classList.add('url')
         urlContainer.appendChild(div)
+        urlinput.value = ""
         // urlLink.textContent = `https://${urlinput.value}`
     }
 })

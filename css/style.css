@@ -95,6 +95,7 @@ nav .login a:last-child{
     display: grid;
     background-color: rgb(235, 241, 241);
     padding-bottom: 10rem;
+    margin-bottom: 3rem;
 }
 
 .inps{
@@ -140,7 +141,7 @@ input[type="text"]:focus{
     outline: none;
 }
 
-input[type="submit"]{
+.shortItBtn{
     height: 52px;
     border-radius: 7px;
     background-color: var(--Cyan);
@@ -351,6 +352,26 @@ input[type="submit"]{
     color: var(--Red);
     opacity: 1; /* Firefox */
   }
+
+#loading{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--Dark-Violet);
+    border-radius: 100%;
+    display: none;
+    animation: spin 1s infinite linear;
+    margin: auto;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 
   @media screen and (max-width:1440px) {
     #hero h1{
@@ -618,7 +639,7 @@ input[type="submit"]{
         margin-right: 0;
     }
 
-    input[type="submit"]{
+    .shortItBtn{
         width: 50%;
     }
 
